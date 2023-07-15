@@ -1,3 +1,4 @@
+//The bucket
 resource "aws_s3_bucket" "user_data_bucket" {
   bucket = var.user_data_bucket_name
   

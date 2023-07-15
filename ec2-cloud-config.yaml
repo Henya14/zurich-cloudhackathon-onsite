@@ -1,0 +1,9 @@
+#cloud-config
+packages:
+  - git
+  - httpd
+runcmd:
+  - git clone http://172.21.0.4:3000/henya/cloud-hackathon-gogs-repo.git /tmp/gitrepo
+  - chmod 775 /var/www/html index.html
+  - cp tmp/gitrepo/app /var/www/html
+  - rm tmp/gitrepo -r
